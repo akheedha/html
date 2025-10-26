@@ -1,0 +1,32 @@
+p::first-line {
+    font-weight: bold;
+}
+
+p::first-letter {
+    color: red;
+    font-size: 24px;
+}
+
+.container h3 + h3 {
+    color: green;
+}
+
+.links ul li:first-child a {
+    color: red;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section.info p + p {
+    margin-top: 15px;
+}
