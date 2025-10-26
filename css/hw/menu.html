@@ -1,45 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Restaurant Menu</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 30px;
+  }
+
+  /* Restaurant Name */
+  h3 {
+    text-align: right;
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    color: #b23b3b;
+  }
+
+  /* Welcome Message */
+  .welcome {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  /* Table Styling */
+  table {
+    width: 60%;
+    margin: 0 auto;
+    border: 2px solid #444;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  th, td {
+    border: 1px solid #555;
+    padding: 12px;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: #ffe6e6;
+  }
+
+  /* Links */
+  a {
+    text-decoration: none;
+    color: #b23b3b;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: #ff6600;
+  }
+
+  /* Icons */
+  .icon {
+    color: #b23b3b;
+    margin-right: 8px;
+  }
+</style>
 </head>
 <body>
 
-<h3 style="text-align:right; font-family:'Trebuchet MS', sans-serif; font-size:28px; color:#d35400;">
-  Gourmet Haven <i class="fa-solid fa-utensils"></i>
-</h3>
+  <h3>
+    <i class="fa-solid fa-utensils icon"></i>
+    The Gourmet Table
+  </h3>
 
-<p style="text-align:center; text-transform:uppercase; letter-spacing:3px; word-spacing:6px;">
-  Welcome to our delightful dining experience
-</p>
+  <p class="welcome">
+    welcome to our cozy corner of flavors!
+  </p>
 
-<table style="border:1px solid black; border-collapse:collapse; width:60%; margin:auto; text-align:center; vertical-align:middle;">
-  <tr>
-    <th style="border:1px solid black; padding:10px;">Menu Item <i class="fa-solid fa-pepper-hot"></i></th>
-    <th style="border:1px solid black; padding:10px;">Price</th>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:10px;">Margherita Pizza</td>
-    <td style="border:1px solid black; padding:10px;">₹350</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:10px;">Pasta Alfredo</td>
-    <td style="border:1px solid black; padding:10px;">₹420</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid black; padding:10px;">Chocolate Lava Cake</td>
-    <td style="border:1px solid black; padding:10px;">₹250</td>
-  </tr>
-</table>
+  <table>
+    <tr>
+      <th><i class="fa-solid fa-burger icon"></i>Item</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Grilled Chicken Sandwich</td>
+      <td>$8.99</td>
+    </tr>
+    <tr>
+      <td>Spaghetti Alfredo</td>
+      <td>$10.50</td>
+    </tr>
+    <tr>
+      <td>Chocolate Lava Cake</td>
+      <td>$6.00</td>
+    </tr>
+  </table>
 
-<p style="text-align:center; margin-top:20px;">
-  <a href="#" style="text-decoration:none; color:#2980b9;" 
-     onmouseover="this.style.color='#e74c3c'" 
-     onmouseout="this.style.color='#2980b9'">
-     Visit Our Website
-  </a>
-</p>
+  <p style="text-align:center; margin-top: 25px;">
+    <a href="#">Visit Our Full Menu</a>
+  </p>
 
 </body>
 </html>

@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+/* Fixed Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Profile Container */
+.profile-container {
+  position: relative;
+  background-color: #fff;
+  width: 80%;
+  margin: 100px auto 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto; /* scroll if overflow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image */
+.profile-container img {
+  float: left;
+  width: 200px;
+  height: 180px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* Info Section */
+.info {
+  overflow: hidden;
+  padding-right: 250px; /* keeps text clear of contact box */
+}
+
+.info h2 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.info h4 {
+  margin: 5px 0;
+  color: #666;
+}
+
+.info p {
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Contact Info Box */
+.contact-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 220px;
+  text-align: center;
+  border-left: 3px solid #ccc; /* vertical line */
+  padding-left: 15px;
+}
+
+.contact-box h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.contact-box p {
+  margin: 8px 0;
+  color: #444;
+}
+
+.contact-box i {
+  color: #2c3e50;
+  margin-right: 8px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .profile-container {
+    width: 90%;
+  }
+
+  .profile-container img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+
+  .info {
+    padding-right: 0;
+  }
+
+  .contact-box {
+    position: static;
+    border-left: none;
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    width: 100%;
+    padding-top: 10px;
+  }
+}

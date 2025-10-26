@@ -1,0 +1,43 @@
+p::first-line {
+    font-weight: bold;
+}
+
+p::first-letter {
+    color: darkred;
+    font-size: 1.6em;
+}
+
+blockquote::before {
+    content: "“";
+    color: gray;
+    font-size: 2em;
+    margin-right: 4px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 15px 0;
+    padding-left: 15px;
+    border-left: 3px solid gray;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.headings {
+    display: flex;
+    gap: 20px;
+}
+
+h4 + h4 {
+    color: green;
+}
