@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery Feedback Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h3 class="text-center mb-4">Bakery Feedback Form</h3>
+
+            <form>
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">Customer Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+
+              <!-- Feedback -->
+              <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea class="form-control" id="feedback" rows="4" placeholder="Write your feedback here..." required></textarea>
+              </div>
+
+              <!-- Preferred Contact Method -->
+              <div class="form-group">
+                <label>Preferred Contact Method:</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" value="Email" required>
+                  <label class="form-check-label" for="contactEmail">Email</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="contactMethod" id="contactPhone" value="Phone">
+                  <label class="form-check-label" for="contactPhone">Phone</label>
+                </div>
+              </div>
+
+              <!-- Satisfaction Level -->
+              <div class="form-group">
+                <label for="satisfaction">Satisfaction Level (1–10):</label>
+                <input type="range" class="form-control-range" id="satisfaction" min="1" max="10">
+              </div>
+
+              <!-- Order Type -->
+              <div class="form-group">
+                <label for="orderType">Type of Order:</label>
+                <select class="form-control" id="orderType" required>
+                  <option value="">Select an option</option>
+                  <option value="Cake">Cake</option>
+                  <option value="Cookies">Cookies</option>
+                  <option value="Pastries">Pastries</option>
+                </select>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block">Submit Feedback</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
