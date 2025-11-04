@@ -1,83 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Feedback Form</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>FeedBack Form</title>
 </head>
-<body class="bg-light">
-
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h3 class="text-center mb-4">Website Feedback Form</h3>
-            
-            <form>
-              <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-              </div>
-
-              <div class="form-group">
-                <label for="feedback">Feedback Message:</label>
-                <textarea class="form-control" id="feedback" rows="4" placeholder="Write your feedback here..." required></textarea>
-              </div>
-
-              <div class="form-group">
-                <label for="source">How did you find our site?</label>
-                <select class="form-control" id="source" required>
-                  <option value="">Select an option</option>
-                  <option>Search Engine</option>
-                  <option>Social Media</option>
-                  <option>Friend or Family</option>
-                  <option>Advertisement</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label>Satisfaction Level:</label><br>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="satisfaction" id="s1" value="1" required>
-                  <label class="form-check-label" for="s1">1</label>
+<body>
+    <h2 class="text-center mt-3">FeedBack Form</h2>
+    <div class="container">
+        <div class="form-group">
+            <label  for="name">Name:</label>
+            <div class="row">
+                <div class="col-sm-5">
+                    <input class="form-control" type="text" name="name" id="name"
+                     placeholder="Enter Your Name" required>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="satisfaction" id="s2" value="2">
-                  <label class="form-check-label" for="s2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="satisfaction" id="s3" value="3">
-                  <label class="form-check-label" for="s3">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="satisfaction" id="s4" value="4">
-                  <label class="form-check-label" for="s4">4</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="satisfaction" id="s5" value="5">
-                  <label class="form-check-label" for="s5">5</label>
-                </div>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block">Submit Feedback</button>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+        <div class="form-group">
+            <label  for="email">Email:</label>
+            <div class="row">
+                <div class="col-sm-5">
+                    <input class="form-control" type="email" name="email" id="email"
+                     placeholder="Enter Your Email" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  for="feedback">Feedback: :</label>
+            <div class="row">
+                <div class="col-sm-5">
+                    <textarea name="feedback" id="feedback" rows="3" cols="58"></textarea>
+                </div>
+            </div>
+        </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+        
+        <!-- CheckBox starts here -->
+        <div class="row">
+            <div class="col-3">
+                <p>What Ratings Will You Give Us? </p>
+            </div>
+            <div class="col-">
+                <div class="form-check-inline">
+                    <label class="check-box-label">
+                        <input type="radio" class="form-check-input" name="radio" id="radio1">1
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="check-box-label">
+                        <input type="radio" class="form-check-input" name="radio" id="radio2">2
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="check-box-label">
+                        <input type="radio" class="form-check-input" name="radio" id="radio3">3
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="check-box-label">
+                        <input type="radio" class="form-check-input" name="radio" id="radio4">4
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <label class="check-box-label">
+                        <input type="radio" class="form-check-input" name="radio" id="radio5">5
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- dropdown starts here -->
+        <div class="dropdown">
+            <div class="row">
+                <div class="col-sm-3">
+                    <p>How did you get to know us? </p>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">Clicl Here</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Social Media</a>
+                        <a class="dropdown-item" href="#">Friends</a>
+                        <a class="dropdown-item" href="#">NewsPaper</a>
+                        <a class="dropdown-item" href="#">News</a>
+                        <a class="dropdown-item" href="#">Collage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-info mt-4" type="button">Submit</button>
+    </div> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
