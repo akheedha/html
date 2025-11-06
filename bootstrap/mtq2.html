@@ -6,35 +6,13 @@
   <title>Bootstrap Layout</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  
-  <style>
-    body {
-      /* 1. Add padding to the top of the body to offset the fixed navbar */
-      padding-top: 56px; 
-    }
-
-    /* 2. Create a container that fills the remaining viewport height */
-    .main-layout-row {
-      height: calc(100vh - 56px); /* Full viewport height minus navbar */
-    }
-
-    /* 3. Make the sidebar and main content columns scroll independently */
-    .sidebar, .main-content {
-      height: 100%;
-      overflow-y: auto; /* Add vertical scrollbar ONLY if needed */
-    }
-
-    /* 4. Correct sidebar link spacing to be tighter, like the image */
-    .sidebar .nav-link {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-    }
-  </style>
 </head>
+
 <body>
 
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Project name</a>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top py-0">
+    <a class="navbar-brand text-secondary" href="#">Project name</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
@@ -50,48 +28,50 @@
     </div>
   </nav>
 
+  <div class="pt-4 mt-5"></div>
+
   <div class="container-fluid">
-    <div class="row main-layout-row">
+    <div class="row min-vh-100">
+      
 
-      <aside class="col-md-3 col-lg-2 bg-light p-3 sidebar">
-        
-        <div class="text-uppercase text-muted small font-weight-bold mb-2">Sidebar</div>
-        <ul class="nav flex-column mb-3">
-          <li class="nav-item">
-            <a href="#" class="nav-link active">Link</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-        </ul>
+      <aside class="col-md-2 col-lg-2 py-3">
+        <div class="bg-light border rounded p-3 overflow-auto">
+          <div class="text-uppercase text-muted small font-weight-bold mb-2">Sidebar</div>
+          <ul class="nav flex-column mb-3">
+            <li class="nav-item"><a href="#" class="nav-link active py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+          </ul>
 
-        <div class="text-uppercase text-muted small font-weight-bold mb-2">Sidebar</div>
-        <ul class="nav flex-column mb-3">
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-        </ul>
+          <div class="text-uppercase text-muted small font-weight-bold mb-2">Sidebar</div>
+          <ul class="nav flex-column mb-3">
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+          </ul>
 
-        <div class="text-uppercase text-muted small font-weight-bold mb-2">Sidebar</div>
-        <ul class="nav flex-column">
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-        </ul>
+          <div class="text-uppercase text-muted small font-weight-bold mb-2">Sidebar</div>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link py-1">Link</a></li>
+          </ul>
+        </div>
       </aside>
 
-      <main class="col-md-9 col-lg-10 py-4 main-content">
-        
+      <!-- Main content -->
+      <main class="col-md-10 col-lg-10 py-3">
         <div class="jumbotron">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead mb-4">
+          <h1 class="display-4 font-weight-bold">Hello, world!</h1>
+          <p class="lead mb-4"><b>
             This is a template for a simple marketing or informational website. It includes a large
             callout called the hero unit and three supporting pieces of content. Use it as a starting point to
             create something more unique.
-          </p>
+          </b></p>
           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#learnMoreModal">
             Learn more »
           </button>
@@ -105,9 +85,11 @@
               tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
               magna mollis euismod. Donec sed odio dui.
             </p>
-            <a href="#" class="btn btn-secondary btn-sm">View details »</a>
+
+
+            <a href="#" class="btn btn-dark btn-sm">View details »</a>
           </div>
-          
+
           <div class="col-md-4 mb-4">
             <h3 class="font-weight-bold">Heading</h3>
             <p>
@@ -115,9 +97,10 @@
               tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
               magna mollis euismod.
             </p>
-            <a href="#" class="btn btn-secondary btn-sm">View details »</a>
-          </div>
           
+            <a href="#" class="btn btn-dark btn-sm">View details »</a>
+          </div>
+
           <div class="col-md-4 mb-4">
             <h3 class="font-weight-bold">Heading</h3>
             <p>
@@ -125,7 +108,17 @@
               tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
               magna mollis euismod. Donec sed odio dui.
             </p>
-            <a href="#" class="btn btn-secondary btn-sm">View details »</a>
+            
+            <a href="#" class="btn btn-dark btn-sm">View details »</a>
+          </div>
+
+          
+          <div class="col-md-4 mb-4">
+            <h3 class="font-weight-bold">Heading</h3>
+            <p>
+              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
+              tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada.
+            </p>
           </div>
 
           <div class="col-md-4 mb-4">
@@ -134,7 +127,6 @@
               Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
               tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada.
             </p>
-            <a href="#" class="btn btn-secondary btn-sm">View details »</a>
           </div>
 
           <div class="col-md-4 mb-4">
@@ -143,22 +135,13 @@
               Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
               tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada.
             </p>
-            <a href="#" class="btn btn-secondary btn-sm">View details »</a>
-          </div>
-
-          <div class="col-md-4 mb-4">
-            <h3 class="font-weight-bold">Heading</h3>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-              tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada.
-            </p>
-            <a href="#" class="btn btn-secondary btn-sm">View details »</a>
           </div>
         </div>
       </main>
     </div>
   </div>
 
+  <!-- Modal -->
   <div class="modal fade" id="learnMoreModal" tabindex="-1" role="dialog" aria-labelledby="learnMoreTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -169,7 +152,7 @@
           </button>
         </div>
         <div class="modal-body">
-          This is a Bootstrap modal opened by the “Learn more »” button.
+          Hi hellloooo
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
