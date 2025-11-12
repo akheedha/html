@@ -14,9 +14,19 @@
             getSummary: function() 
             {document.write( this.title +  " was written by " + this.author + " in " + this.year +".");
             }
+
         }
+        
+
         book.getSummary();
-    
+
+        function printBookSummary(bookObj)  
+        {
+        document.write(bookObj.title +  " was written by " + bookObj.author + " in " + bookObj.year +".")
+        }
+
+       
+        printBookSummary(book);
     </script>
 
 </body>
