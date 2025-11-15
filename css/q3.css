@@ -15,7 +15,7 @@ body{
 #left-block{
     width: 50%;
     height: 100vh;
-    background-image: linear-gradient(#ab96c6,#e1b48a);
+    background-image: linear-gradient(#ac98c4,#efd3b8);
 }
 #form{
     width: 50%;        
@@ -58,7 +58,7 @@ label[for="password"],label[for="email"]{
     }
 
     #left-block{
-        /* removes the left side block  */
+        /* removes left side block  */
         display: none;
     }
 
