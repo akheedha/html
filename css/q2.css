@@ -1,0 +1,15 @@
+a{
+    border: 2px solid rgb(204, 231, 255);
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+a:hover{
+    opacity: 0.6;
+    color: black;
+}

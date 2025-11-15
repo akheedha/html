@@ -1,0 +1,19 @@
+h2{
+    text-decoration: dashed underline;
+    text-align: center;
+}
+table{
+    background-color: #3338;
+    color: white;
+    height: 500px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+td,th{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    text-decoration: underline;
+}
