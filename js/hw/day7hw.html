@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Reminder Tool</title>
+</head>
+<body>
+
+<h2>Event Reminder Tool</h2>
+
+<input type="date" id="eventDate">
+<button onclick="showDetails()">Check</button>
+
+<p id="details"></p>
+<p id="yearsPassed"></p>
+<p id="message"></p>
+
+<script>
+    function showDetails() {
+        var dateInput = document.getElementById("eventDate").value;
+
+        var eventDate = new Date(dateInput);
+
+        var year = eventDate.getFullYear();
+
+        var monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        var monthName = monthNames[eventDate.getMonth()];
+
+        var day = eventDate.getDate();
+
+        var today = new Date();
+        var yearsPassed = today.getFullYear() - year;
+
+        if (
+            today.getMonth() < eventDate.getMonth() ||
+            (today.getMonth() === eventDate.getMonth() && today.getDate() < day)
+        ) {
+            yearsPassed--;
+        }
+
+        document.getElementById("details").innerHTML =
+            "Selected Date: " + day + " " + monthName + ", " + year;
+
+        document.getElementById("yearsPassed").innerHTML =
+            "Full Years Passed: " + yearsPassed;
+
+        var oneYearLater = new Date(eventDate);
+        oneYearLater.setFullYear(eventDate.getFullYear() + 1);
+
+        if (today > oneYearLater) {
+            document.getElementById("message").innerHTML =
+                "It has been more than a year since that date.";
+        } else {
+            document.getElementById("message").innerHTML =
+                "It has been less than a year since that date.";
+        }
+    }
+</script>
+
+</body>
+</html>
