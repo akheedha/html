@@ -1,32 +1,20 @@
-SELECT 
-    b.book_id,
-    b.title,
-    br.name AS borrower_name
-FROM books b
-LEFT JOIN borrowers br
-ON b.book_id = br.book_id;
+SELECT book_id, title, name
+FROM books
+LEFT JOIN borrowers
+ON books.book_id = borrowers.book_id;
 
-SELECT 
-    br.borrower_id,
-    br.name,
-    b.book_id,
-    b.title
-FROM borrowers br
-LEFT JOIN books b
-ON br.book_id = b.book_id;
+SELECT borrower_id, name, book_id, title
+FROM borrowers
+LEFT JOIN books
+ON borrowers.book_id = books.book_id;
 
-SELECT 
-    b.book_id,
-    b.title
-FROM books b
-LEFT JOIN borrowers br
-ON b.book_id = br.book_id
-WHERE br.book_id IS NULL;
+SELECT book_id, title
+FROM books
+LEFT JOIN borrowers
+ON books.book_id = borrowers.book_id
+WHERE borrowers.book_id IS NULL;
 
-SELECT 
-    br.borrower_id,
-    br.name,
-    b.title
-FROM borrowers br
-LEFT JOIN books b
-ON br.book_id = b.book_id;
+SELECT borrower_id, name, title
+FROM borrowers
+LEFT JOIN books
+ON borrowers.book_id = books.book_id;
