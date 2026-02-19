@@ -25,5 +25,4 @@ for course, count in course_count.items():
 growth_projection = {
     course: count*2 for course, count in course_count.items()
 }
-
 print("Growth projection ",growth_projection)
